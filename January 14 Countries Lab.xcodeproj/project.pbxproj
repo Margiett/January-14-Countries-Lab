@@ -19,6 +19,8 @@
 		9F86EA4123CE60D900BA32F6 /* CountryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86EA4023CE60D900BA32F6 /* CountryCVC.swift */; };
 		9F86EA4323CE61FF00BA32F6 /* countryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86EA4223CE61FF00BA32F6 /* countryModel.swift */; };
 		9FE445C223CE852A000F4ACE /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE445C123CE852A000F4ACE /* CountryDetail.swift */; };
+		9FEEE0F123D0F4AA00D0E359 /* weatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEEE0F023D0F4AA00D0E359 /* weatherModel.swift */; };
+		9FEEE0F523D0F75900D0E359 /* WeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEEE0F423D0F75900D0E359 /* WeatherAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9F86EA4023CE60D900BA32F6 /* CountryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCVC.swift; sourceTree = "<group>"; };
 		9F86EA4223CE61FF00BA32F6 /* countryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countryModel.swift; sourceTree = "<group>"; };
 		9FE445C123CE852A000F4ACE /* CountryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
+		9FEEE0F023D0F4AA00D0E359 /* weatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherModel.swift; sourceTree = "<group>"; };
+		9FEEE0F423D0F75900D0E359 /* WeatherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,10 @@
 		9F86EA0D23CE5A0400BA32F6 = {
 			isa = PBXGroup;
 			children = (
+				9FEEE0F723D100E800D0E359 /* Storyboard */,
+				9FEEE0F623D100BF00D0E359 /* Controllers */,
+				9FEEE0F323D0F73300D0E359 /* APICLIENT */,
+				9FEEE0F223D0F59100D0E359 /* Model */,
 				9F86EA1823CE5A0400BA32F6 /* January 14 Countries Lab */,
 				9F86EA2F23CE5A0700BA32F6 /* January 14 Countries LabTests */,
 				9F86EA1723CE5A0400BA32F6 /* Products */,
@@ -91,12 +99,7 @@
 			children = (
 				9F86EA1923CE5A0400BA32F6 /* AppDelegate.swift */,
 				9F86EA1B23CE5A0400BA32F6 /* SceneDelegate.swift */,
-				9F86EA1D23CE5A0400BA32F6 /* CountryViewController.swift */,
-				9FE445C123CE852A000F4ACE /* CountryDetail.swift */,
-				9F86EA4223CE61FF00BA32F6 /* countryModel.swift */,
-				9F86EA3E23CE5FCD00BA32F6 /* CountryAPIClient.swift */,
 				9F86EA4023CE60D900BA32F6 /* CountryCVC.swift */,
-				9F86EA1F23CE5A0400BA32F6 /* Main.storyboard */,
 				9F86EA2223CE5A0700BA32F6 /* Assets.xcassets */,
 				9F86EA2423CE5A0700BA32F6 /* LaunchScreen.storyboard */,
 				9F86EA2723CE5A0700BA32F6 /* Info.plist */,
@@ -111,6 +114,41 @@
 				9F86EA3223CE5A0700BA32F6 /* Info.plist */,
 			);
 			path = "January 14 Countries LabTests";
+			sourceTree = "<group>";
+		};
+		9FEEE0F223D0F59100D0E359 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F86EA4223CE61FF00BA32F6 /* countryModel.swift */,
+				9FEEE0F023D0F4AA00D0E359 /* weatherModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FEEE0F323D0F73300D0E359 /* APICLIENT */ = {
+			isa = PBXGroup;
+			children = (
+				9F86EA3E23CE5FCD00BA32F6 /* CountryAPIClient.swift */,
+				9FEEE0F423D0F75900D0E359 /* WeatherAPIClient.swift */,
+			);
+			path = APICLIENT;
+			sourceTree = "<group>";
+		};
+		9FEEE0F623D100BF00D0E359 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F86EA1D23CE5A0400BA32F6 /* CountryViewController.swift */,
+				9FE445C123CE852A000F4ACE /* CountryDetail.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9FEEE0F723D100E800D0E359 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9F86EA1F23CE5A0400BA32F6 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +264,8 @@
 				9F86EA1A23CE5A0400BA32F6 /* AppDelegate.swift in Sources */,
 				9FE445C223CE852A000F4ACE /* CountryDetail.swift in Sources */,
 				9F86EA1C23CE5A0400BA32F6 /* SceneDelegate.swift in Sources */,
+				9FEEE0F123D0F4AA00D0E359 /* weatherModel.swift in Sources */,
+				9FEEE0F523D0F75900D0E359 /* WeatherAPIClient.swift in Sources */,
 				9F86EA3F23CE5FCD00BA32F6 /* CountryAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

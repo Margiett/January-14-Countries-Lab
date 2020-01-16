@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import ImageKit
 import MapKit
 
-class CountryDetail: UIViewController {
+class CountryDetail: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var countryImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var populationLabel: UILabel!
     @IBOutlet weak var capitalLabel: UILabel!
     @IBOutlet weak var countryMapKit: MKMapView!
-    
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
     
     
     var selectedCountry: Country?
+    
+    var selectedWeather: WeatherModel?
+    var selectedID: WeatherIDModel?
     
 
     override func viewDidLoad() {
@@ -32,9 +37,28 @@ class CountryDetail: UIViewController {
         guard let countryData = selectedCountry else {
             fatalError("segue did not work")
         }
+        
         nameLabel.text = selectedCountry?.name
-        populationLabel.text = selectedCountry?.population.description
-        capitalLabel.text = selectedCountry?.capital
+        
+        populationLabel.text = "Population: \(selectedCountry?.population.description)"
+        
+        capitalLabel.text = "Capital: \(selectedCountry?.capital)"
+         
+        currencyLabel.text = "Currency: \(selectedCountry?.currencies?.first?.name ?? "")(\(selectedCountry?.currencies?.first?.symbol ?? ""))"
+        
+        WeatherID.getWeatherID(for: WeatherID.iD(id: selectedWeather?.woeid! ?? 1), completion: { [weak self] (result) in
+            switch result {
+            case .failure(let appError):
+                print("error \(appError)")
+            case .success(let idweather):
+                DispatchQueue.main.async {
+                    self?.weatherLabel.text = "Weather: \(idweather.first?.weather_state_name)"
+                }
+            }
+            
+            
+        })
+        
         
         
         let imageURL = "https://www.countryflags.io/\(selectedCountry!.alpha2Code)/flat/64.png"
@@ -53,7 +77,7 @@ class CountryDetail: UIViewController {
     }
     
     }
-    
+    //MARK: This is using the mapkit
     func countryLocation() {
         let lat = selectedCountry?.latlng?.first
         let long = selectedCountry?.latlng?.last
@@ -62,6 +86,8 @@ class CountryDetail: UIViewController {
         let region = MKCoordinateRegion(center: location, span: span)
         countryMapKit.setRegion(region, animated: true)
         
+        
+        //MARK: This is make the red dot come up
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2DMake(lat ?? 0.0, long ?? 0.0)
         annotation.title = selectedCountry?.name

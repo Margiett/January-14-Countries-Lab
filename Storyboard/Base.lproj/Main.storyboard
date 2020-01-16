@@ -139,42 +139,58 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country's capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="the-y2-nUG">
-                                <rect key="frame" x="20" y="400" width="374" height="21"/>
+                                <rect key="frame" x="20" y="390" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country's population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZc-RI-FbM">
-                                <rect key="frame" x="20" y="446" width="374" height="21"/>
+                                <rect key="frame" x="20" y="426" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c7L-9B-py5">
-                                <rect key="frame" x="20" y="493" width="374" height="369"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c7L-9B-py5">
+                                <rect key="frame" x="20" y="556" width="374" height="306"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRy-Ep-X6n">
+                                <rect key="frame" x="20" y="462" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3o-8p-bXa">
+                                <rect key="frame" x="20" y="498" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lRy-Ep-X6n" firstAttribute="height" secondItem="A3o-8p-bXa" secondAttribute="height" id="2A0-EF-jrO"/>
                             <constraint firstItem="EI2-h0-buL" firstAttribute="top" secondItem="FmD-lr-3BI" secondAttribute="top" constant="20" id="6Xx-ha-iAZ"/>
-                            <constraint firstItem="EZc-RI-FbM" firstAttribute="top" secondItem="the-y2-nUG" secondAttribute="bottom" constant="25" id="ARP-Oh-eoi"/>
+                            <constraint firstItem="EZc-RI-FbM" firstAttribute="top" secondItem="the-y2-nUG" secondAttribute="bottom" constant="15" id="ARP-Oh-eoi"/>
+                            <constraint firstItem="A3o-8p-bXa" firstAttribute="leading" secondItem="FmD-lr-3BI" secondAttribute="leading" constant="20" id="H6E-ed-lJH"/>
+                            <constraint firstItem="lRy-Ep-X6n" firstAttribute="leading" secondItem="FmD-lr-3BI" secondAttribute="leading" constant="20" id="Kag-ZG-HQN"/>
                             <constraint firstItem="Dxb-Tc-yCK" firstAttribute="top" secondItem="EI2-h0-buL" secondAttribute="bottom" constant="20" id="MLy-Fb-iTG"/>
-                            <constraint firstItem="the-y2-nUG" firstAttribute="top" secondItem="Dxb-Tc-yCK" secondAttribute="bottom" constant="25" id="Njk-0t-x1h"/>
-                            <constraint firstItem="FmD-lr-3BI" firstAttribute="trailing" secondItem="c7L-9B-py5" secondAttribute="trailing" constant="20" id="P19-KU-0r6"/>
+                            <constraint firstItem="the-y2-nUG" firstAttribute="top" secondItem="Dxb-Tc-yCK" secondAttribute="bottom" constant="15" id="Njk-0t-x1h"/>
                             <constraint firstItem="EZc-RI-FbM" firstAttribute="leading" secondItem="FmD-lr-3BI" secondAttribute="leading" constant="20" id="RtF-rB-cw7"/>
                             <constraint firstItem="FmD-lr-3BI" firstAttribute="trailing" secondItem="EI2-h0-buL" secondAttribute="trailing" constant="20" id="Xfk-Zh-h7F"/>
+                            <constraint firstItem="lRy-Ep-X6n" firstAttribute="top" secondItem="EZc-RI-FbM" secondAttribute="bottom" constant="15" id="XoB-PZ-uso"/>
                             <constraint firstItem="FmD-lr-3BI" firstAttribute="trailing" secondItem="Dxb-Tc-yCK" secondAttribute="trailing" constant="20" id="YXM-d6-7NH"/>
                             <constraint firstItem="Dxb-Tc-yCK" firstAttribute="leading" secondItem="FmD-lr-3BI" secondAttribute="leading" constant="20" id="ZN5-ts-kbc"/>
                             <constraint firstItem="EZc-RI-FbM" firstAttribute="height" secondItem="xnL-r8-rp4" secondAttribute="height" multiplier="0.0234375" id="aXV-kS-lWM"/>
                             <constraint firstItem="the-y2-nUG" firstAttribute="leading" secondItem="FmD-lr-3BI" secondAttribute="leading" constant="20" id="cwX-Ho-I8g"/>
+                            <constraint firstItem="FmD-lr-3BI" firstAttribute="trailing" secondItem="A3o-8p-bXa" secondAttribute="trailing" constant="20" id="djz-yi-Evg"/>
                             <constraint firstItem="the-y2-nUG" firstAttribute="height" secondItem="EZc-RI-FbM" secondAttribute="height" id="erq-im-hKk"/>
-                            <constraint firstItem="c7L-9B-py5" firstAttribute="height" secondItem="EZc-RI-FbM" secondAttribute="height" multiplier="17.5714" id="fYL-ew-ayn"/>
                             <constraint firstItem="FmD-lr-3BI" firstAttribute="trailing" secondItem="EZc-RI-FbM" secondAttribute="trailing" constant="20" id="j6h-ad-76K"/>
                             <constraint firstItem="EI2-h0-buL" firstAttribute="leading" secondItem="FmD-lr-3BI" secondAttribute="leading" constant="20" id="jh5-4O-a4r"/>
-                            <constraint firstItem="c7L-9B-py5" firstAttribute="leading" secondItem="FmD-lr-3BI" secondAttribute="leading" constant="20" id="qZs-6X-fYH"/>
                             <constraint firstItem="FmD-lr-3BI" firstAttribute="trailing" secondItem="the-y2-nUG" secondAttribute="trailing" constant="20" id="vff-LK-Ff5"/>
+                            <constraint firstItem="FmD-lr-3BI" firstAttribute="trailing" secondItem="lRy-Ep-X6n" secondAttribute="trailing" constant="20" id="wbJ-f2-vxW"/>
                             <constraint firstItem="Dxb-Tc-yCK" firstAttribute="height" secondItem="the-y2-nUG" secondAttribute="height" id="wmz-Wx-Ned"/>
-                            <constraint firstItem="c7L-9B-py5" firstAttribute="bottom" secondItem="FmD-lr-3BI" secondAttribute="bottom" id="yVw-md-fSF"/>
+                            <constraint firstItem="A3o-8p-bXa" firstAttribute="top" secondItem="lRy-Ep-X6n" secondAttribute="bottom" constant="15" id="xAS-s7-PIu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FmD-lr-3BI"/>
                     </view>
@@ -183,8 +199,10 @@
                         <outlet property="capitalLabel" destination="the-y2-nUG" id="wcW-3Z-QjU"/>
                         <outlet property="countryImage" destination="EI2-h0-buL" id="lBb-wK-Xqq"/>
                         <outlet property="countryMapKit" destination="c7L-9B-py5" id="wAz-3e-v1s"/>
+                        <outlet property="currencyLabel" destination="lRy-Ep-X6n" id="boj-QC-AwA"/>
                         <outlet property="nameLabel" destination="Dxb-Tc-yCK" id="cGE-W2-RrL"/>
                         <outlet property="populationLabel" destination="EZc-RI-FbM" id="ZRq-tR-dXo"/>
+                        <outlet property="weatherLabel" destination="A3o-8p-bXa" id="mEz-i6-bsV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0p2-GY-OP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -199,7 +217,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nvg-Sz-Kcf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

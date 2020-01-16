@@ -13,6 +13,9 @@ class CountryViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var weatherCountry = [WeatherModel]()
+    
+    
     var searchQuery = "united" {
         didSet {
             searchCountry()
@@ -51,6 +54,18 @@ class CountryViewController: UIViewController {
                 fatalError("this did not work")
             }
         countryDetail.selectedCountry = countriesDidSet[indexPath.row]
+        
+        WeatherAPIClient.getWeatherAPI(for: WeatherAPIClient.lattlong(latt: countriesDidSet[indexPath.row].latlng?[0] ?? 0.0, long: countriesDidSet[indexPath.row].latlng?[1] ?? 1.1 ), completion:{ [weak self] (result) in
+            switch result {
+            case .failure(let appError):
+            print("error \(appError)")
+            case .success(let weather):
+                countryDetail.selectedWeather = weather.first
+                
+                
+            }
+            })
+        sleep(3)
         }
 }
 

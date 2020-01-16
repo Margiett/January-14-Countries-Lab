@@ -14,7 +14,9 @@ struct Country: Codable {
     let alpha2Code: String
     let capital: String
     let population: Int
-    let currencies: [Currency]
+    let currencies: [Currency]?
+    let latlng: [Double]?
+    let region: String
     
 }
 struct Currency: Codable {

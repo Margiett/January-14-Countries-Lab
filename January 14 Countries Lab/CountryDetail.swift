@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import MapKit
 
 class CountryDetail: UIViewController {
     @IBOutlet weak var countryImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var populationLabel: UILabel!
     @IBOutlet weak var capitalLabel: UILabel!
+    @IBOutlet weak var countryMapKit: MKMapView!
+    
+    
     
     var selectedCountry: Country?
     
@@ -20,6 +24,7 @@ class CountryDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        countryLocation()
 
     }
     
@@ -47,6 +52,23 @@ class CountryDetail: UIViewController {
         
     }
     
+    }
+    
+    func countryLocation() {
+        let lat = selectedCountry?.latlng?.first
+        let long = selectedCountry?.latlng?.last
+        let location = CLLocationCoordinate2DMake(lat ?? 0.0, long ?? 0.0)
+        let span = MKCoordinateSpan(latitudeDelta: 20, longitudeDelta: 20) // this is how zoomed in it would be on the map
+        let region = MKCoordinateRegion(center: location, span: span)
+        countryMapKit.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2DMake(lat ?? 0.0, long ?? 0.0)
+        annotation.title = selectedCountry?.name
+        countryMapKit.addAnnotation(annotation)
+        
+        
+        
     }
     
 }

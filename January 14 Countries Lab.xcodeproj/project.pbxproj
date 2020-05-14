@@ -72,10 +72,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F0F4BE623D8DB4200DC15E8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9F86EA4023CE60D900BA32F6 /* CountryCVC.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9F86EA0D23CE5A0400BA32F6 = {
 			isa = PBXGroup;
 			children = (
 				9FEEE0F723D100E800D0E359 /* Storyboard */,
+				9F0F4BE623D8DB4200DC15E8 /* Cell */,
 				9FEEE0F623D100BF00D0E359 /* Controllers */,
 				9FEEE0F323D0F73300D0E359 /* APICLIENT */,
 				9FEEE0F223D0F59100D0E359 /* Model */,
@@ -99,7 +108,6 @@
 			children = (
 				9F86EA1923CE5A0400BA32F6 /* AppDelegate.swift */,
 				9F86EA1B23CE5A0400BA32F6 /* SceneDelegate.swift */,
-				9F86EA4023CE60D900BA32F6 /* CountryCVC.swift */,
 				9F86EA2223CE5A0700BA32F6 /* Assets.xcassets */,
 				9F86EA2423CE5A0700BA32F6 /* LaunchScreen.storyboard */,
 				9F86EA2723CE5A0700BA32F6 /* Info.plist */,

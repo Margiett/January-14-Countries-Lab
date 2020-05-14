@@ -62,6 +62,7 @@ class CountryDetail: UIViewController, CLLocationManagerDelegate {
         
         
         let imageURL = "https://www.countryflags.io/\(selectedCountry!.alpha2Code)/flat/64.png"
+        
         countryImage.getImage(with: imageURL) { [weak self] (result) in
                      switch result {
                      case .failure:

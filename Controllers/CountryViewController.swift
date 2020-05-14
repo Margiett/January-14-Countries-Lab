@@ -21,6 +21,7 @@ class CountryViewController: UIViewController {
             searchCountry()
         }
     }
+    
     var countriesDidSet = [Country]() {
         didSet {
             DispatchQueue.main.async {
@@ -79,6 +80,8 @@ extension CountryViewController: UISearchBarDelegate {
         searchQuery = searchBar.text!
     }
 }
+
+
 extension CountryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        return countriesDidSet.count

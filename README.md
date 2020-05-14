@@ -23,6 +23,7 @@ In the detail view controller you would be able to see
 ## ScreenShot 
 
 ![home screen](Assets/homescreen.png)
+![detail screen](Assets/detailscreen.png)
 
 ## Gif
 
